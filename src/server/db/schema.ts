@@ -10,25 +10,25 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-/**
- * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
- * database instance for multiple projects.
- *
- * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
- */
-export const createTable = pgTableCreator((name) => `portfolio-next_${name}`);
+export const createTable = pgTableCreator((name) => `portfolio_${name}`);
 
-export const posts = createTable(
-  "post",
+export const projects = createTable(
+  "project",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    title: varchar("title", { length: 256 }).notNull(),
+    subtitle: varchar("subtitle", { length: 256 }).notNull(),
+    description: varchar("description", { length: 256 }).notNull(),
+    image: varchar("image", { length: 1024 }).notNull(),
+    link: varchar("link", { length: 1024 }).notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
-    updatedAt: timestamp("updatedAt"),
   },
-  (example) => ({
-    nameIndex: index("name_idx").on(example.name),
-  })
+  (schema) => ({
+    titleSubtitleIndex: index("title_subtitle_idx").on(
+      schema.title,
+      schema.subtitle,
+    ),
+  }),
 );
