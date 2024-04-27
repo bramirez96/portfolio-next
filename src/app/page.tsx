@@ -22,7 +22,7 @@ const wallData = [
 ];
 
 export default async function HomePage() {
-  const posts = await db.query.posts.findMany();
+  const posts = await db.query.projects.findMany();
 
   console.log(posts);
 
@@ -30,7 +30,7 @@ export default async function HomePage() {
     <main className="">
       <div className="flex flex-wrap gap-4">
         {posts.map((post) => (
-          <div key={post.id}>{post.name}</div>
+          <div key={post.id}>{post.title}</div>
         ))}
         {wallData.map((image, index) => (
           <div key={image.id + "_" + index} className="w-48">

@@ -1,16 +1,6 @@
-// Example model schema from the Drizzle docs
-// https://orm.drizzle.team/docs/sql-schema-declaration
-
 import { sql } from "drizzle-orm";
-import {
-  index,
-  pgTableCreator,
-  serial,
-  timestamp,
-  varchar,
-} from "drizzle-orm/pg-core";
-
-export const createTable = pgTableCreator((name) => `portfolio_${name}`);
+import { index, serial, timestamp, varchar } from "drizzle-orm/pg-core";
+import createTable from "./createTable";
 
 export const projects = createTable(
   "project",
