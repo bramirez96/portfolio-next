@@ -1,5 +1,7 @@
 import { db } from "~/server/db";
 
+export const dynamic = "force-dynamic";
+
 const files = [
   "https://utfs.io/f/6a4dc840-7e04-4584-9f69-bb7e53088b96-mes7ti.svg",
   "https://utfs.io/f/b778596f-2c63-4671-874d-5d105adeaefa-ezf5w8.jpg",
