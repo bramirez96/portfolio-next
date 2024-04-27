@@ -7,7 +7,7 @@ Following the T3 stack tutorial and his TODOs:
 - [x] make it deploy (vercel)
 - [x] Scaffold basic ui with mock data
 - [x] tidy up build process
-- [ ] Set up a database w/ vercel postgres
+- [x] Set up a database w/ vercel postgres
 - [ ] Attach database to UI
 - [ ] Add authentication w/ clerk
 - [ ] add image upload
