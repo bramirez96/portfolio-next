@@ -10,8 +10,9 @@ Following the T3 stack tutorial and his TODOs:
 - [x] Set up a database w/ vercel postgres
 - [x] Attach database to UI
 - [x] Build database schema
-- [ ] Rebuild UI around new database model
-- [ ] Add authentication w/ clerk
+- [x] Rebuild UI around new database model
+- [x] Add authentication w/ clerk
+- [ ] "taint" (server-only) (????)
 - [ ] add image upload
 - [ ] Error management w/ Sentry
 - [ ] Routing/image page w/ parallel route
