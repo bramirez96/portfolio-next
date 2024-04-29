@@ -13,7 +13,7 @@ export default async function HomePage() {
   console.log(posts);
 
   return (
-    <main className="">
+    <main className="p-4">
       <div className="flex flex-wrap gap-4">
         {posts.map((post) => (
           <div key={post.id}>{post.title}</div>
