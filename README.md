@@ -12,8 +12,9 @@ Following the T3 stack tutorial and his TODOs:
 - [x] Build database schema
 - [x] Rebuild UI around new database model
 - [x] Add authentication w/ clerk
+- [x] add image upload
 - [ ] "taint" (server-only) (????)
-- [ ] add image upload
+- [ ] use Next/Image component
 - [ ] Error management w/ Sentry
 - [ ] Routing/image page w/ parallel route
 - [ ] Delete button w/ Server Actions
